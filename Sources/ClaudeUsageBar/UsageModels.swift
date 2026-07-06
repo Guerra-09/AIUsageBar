@@ -81,11 +81,11 @@ struct DisplayState {
     }
 
     var sessionPercent: Int {
-        Int((Double(tokensSoFar) / Double(sessionTokenLimit) * 100).rounded())
+        Int((Double(tokensSoFar) / Double(sessionTokenLimit) * 100).rounded(.down))
     }
 
     var weeklyPercent: Int {
-        Int((Double(weeklyTokensSoFar) / Double(weeklyTokenLimit) * 100).rounded())
+        Int((Double(weeklyTokensSoFar) / Double(weeklyTokenLimit) * 100).rounded(.down))
     }
 
     var elapsedFraction: Double {
